@@ -1,0 +1,20 @@
+body {
+	text-align: center;
+}
+
+button {
+  display: inline-block;
+}
+
+.champdiv {
+	display: inline-block;
+	text-align: center;
+}
+
+.champion {
+  height: 15%;
+}
+
+#google_translate_element {
+	text-align: left;
+}
