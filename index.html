@@ -3,13 +3,28 @@
 
 <head>
 	<link rel="icon" type="image/png" sizes="32x32" href="https://codehs.com/uploads/da54608384f62715223799582b4d4992">
-	<link rel="stylesheet" type="text/css" href="ext/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>What is their CC?</title>
+	<meta name="viewport" content="width=device-width" />
 </head>
 
-<body>
+<body onload="loadCookies()">
+	<!-- 
+		hi :3 
+		this was coded by apollo :)
+		they r a yuumi main so they decided to make an easy guide for how to avoid cc.
+		YUUMI MAINS DESERVE BETTER!
+		p.s. P + A FOREVER!
+		developed on repl.it, deployed on github + vercel.
+		completely coded by me :) design is not my strong suit lol sorry if it looks bad
+	-->
+
 	<div id="google_translate_element"></div>
-	<p id="good"></p>
+
+	<h2>What is their CC?</h2>
+	<p>Click on a champion to see which abilities are crowd control. Click the star in the upper left corner to save that
+		champion for future reference.</p>
+	<p id="little">note: this website looks best fullscreen. there may be errors with sizing on small screens.</p>
 
 	<input type="text" id="searchChamps" placeholder="Filter by text...">
 	<br><br>
@@ -19,12 +34,14 @@
 	<button id="midButton">Hide Mid Lane Champs!</button>
 	<button id="botButton">Hide Bot Lane Champs!</button>
 	<button id="supButton">Hide Support Champs!</button>
+	<button id="favoriteButton">Show Only Favorites!</button>
 	<br><br>
-
+	
 	<script type="module" src="ext/addchamps.js"></script>
+	<script type="module" src="ext/showability.js"></script>
 	<script src="ext/togglelaners.js"></script>
-	<script src="ext/date.js"></script>
 	<script src="ext/translate.js"></script>
+	<script src="ext/cookie.js"></script>
 	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 

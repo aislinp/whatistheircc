@@ -1,24 +1,17 @@
-//import champions and their cc
-/*
-import champs from './json/champs.json' assert { type: 'json' };
-import cc from './json/cc.json' assert { type: 'json' };
-*/
-import { showAbility } from './showability.js';
-
 const champs = {
 	"champions": [
 		{ "name": "Aatrox", "lanes": ["Top"], "lolid": "0266" },
 		{ "name": "Ahri", "lanes": ["Mid"], "lolid": "0103" },
-		{ "name": "Akali", "lanes": ["Mid"] },
-		{ "name": "Akshan", "lanes": ["Mid"] },
-		{ "name": "Alistar", "lanes": ["Support", "Top"] },
-		{ "name": "Amumu", "lanes": ["Jungle", "Support"] },
-		{ "name": "Anivia", "lanes": ["Mid", "Support"] },
-		{ "name": "Annie", "lanes": ["Mid"] },
-		{ "name": "Aphelios", "lanes": ["ADC"] },
-		{ "name": "Ashe", "lanes": ["ADC", "Support"] },
-		{ "name": "Aurelion Sol", "lanes": ["Mid"] },
-		{ "name": "Azir", "lanes": ["Mid"] },
+		{ "name": "Akali", "lanes": ["Mid"], "lolid": "0084" },
+		{ "name": "Akshan", "lanes": ["Mid"], "lolid": "0166" },
+		{ "name": "Alistar", "lanes": ["Support", "Top"], "lolid": "0012" },
+		{ "name": "Amumu", "lanes": ["Jungle", "Support"], "lolid": "0166" },
+		{ "name": "Anivia", "lanes": ["Mid", "Support"], "lolid": "0032" },
+		{ "name": "Annie", "lanes": ["Mid"], "lolid": "0001" },
+		{ "name": "Aphelios", "lanes": ["ADC"], "lolid": "0523" },
+		{ "name": "Ashe", "lanes": ["ADC", "Support"], "lolid": "0022" },
+		{ "name": "Aurelion Sol", "lanes": ["Mid"], "lolid": "0524" },
+		{ "name": "Azir", "lanes": ["Mid"], "lolid": "0268" },
 		{ "name": "Bard", "lanes": ["Support"] },
 		{ "name": "Bel'Veth", "lanes": ["Jungle"] },
 		{ "name": "Blitzcrank", "lanes": ["Support"] },
@@ -37,15 +30,15 @@ const champs = {
 		{ "name": "Elise", "lanes": ["Jungle"] },
 		{ "name": "Evelynn", "lanes": ["Jungle"] },
 		{ "name": "Ezreal", "lanes": ["ADC"] },
-		{ "name": "Fiddlesticks", "lanes": ["Jungle"] },
+		{ "name": "Fiddlesticks", "lanes": ["Jungle"], "lolid": "0009" },
 		{ "name": "Fiora", "lanes": ["Top"] },
-		{ "name": "Fizz", "lanes": ["Mid"] },
-		{ "name": "Galio", "lanes": ["Mid", "Support"] },
+		{ "name": "Fizz", "lanes": ["Mid"], "lolid": "0105" },
+		{ "name": "Galio", "lanes": ["Mid", "Support"], "lolid": "0003" },
 		{ "name": "Gangplank", "lanes": ["Mid", "Support"] },
 		{ "name": "Garen", "lanes": ["Top", "Jungle"] },
-		{ "name": "Gnar", "lanes": ["Top"] },
+		{ "name": "Gnar", "lanes": ["Top"], "lolid": "0150" },
 		{ "name": "Gragas", "lanes": ["Top", "Support"] },
-		{ "name": "Graves", "lanes": ["Jungle"] },
+		{ "name": "Graves", "lanes": ["Jungle"], "lolid": "0104"  },
 		{ "name": "Gwen", "lanes": ["Top", "Jungle"] },
 		{ "name": "Hecarim", "lanes": ["Jungle"] },
 		{ "name": "Heimerdinger", "lanes": ["Mid"] },
@@ -64,14 +57,14 @@ const champs = {
 		{ "name": "Karthus", "lanes": ["Jungle"] },
 		{ "name": "Kassadin", "lanes": ["Mid"] },
 		{ "name": "Katarina", "lanes": ["Mid"] },
-		{ "name": "Kayle", "lanes": ["Top"] },
+		{ "name": "Kayle", "lanes": ["Top"], "lolid": "0010" },
 		{ "name": "Kayn", "lanes": ["Jungle"] },
-		{ "name": "Kennen", "lanes": ["Top"] },
+		{ "name": "Kennen", "lanes": ["Top"], "lolid": "0017" },
 		{ "name": "Kha'Zix", "lanes": ["Jungle"] },
 		{ "name": "Kindred", "lanes": ["Jungle"] },
 		{ "name": "Kled", "lanes": ["Top", "Jungle"] },
 		{ "name": "Kog'Maw", "lanes": ["ADC"] },
-		{ "name": "LeBlanc", "lanes": ["Mid"] },
+		{ "name": "LeBlanc", "lanes": ["Mid"], "lolid": "0007" },
 		{ "name": "Lee Sin", "lanes": ["Jungle"] },
 		{ "name": "Leona", "lanes": ["Support"] },
 		{ "name": "Lillia", "lanes": ["Top", "Jungle"] },
@@ -82,19 +75,19 @@ const champs = {
 		{ "name": "Malphite", "lanes": ["Support", "Top", "Mid"] },
 		{ "name": "Malzahar", "lanes": ["Mid"] },
 		{ "name": "Maokai", "lanes": ["Top", "Support"] },
-		{ "name": "Master Yi", "lanes": ["Jungle"] },
-		{ "name": "Miss Fortune", "lanes": ["ADC", "Support"] },
+		{ "name": "Master Yi", "lanes": ["Jungle"], "lolid": "0011" },
+		{ "name": "Miss Fortune", "lanes": ["ADC", "Support"], "lolid": "0021" },
 		{ "name": "Mordekaiser", "lanes": ["Top"] },
 		{ "name": "Morgana", "lanes": ["Support"] },
-		{ "name": "Nami", "lanes": ["Support"] },
+		{ "name": "Nami", "lanes": ["Support"], "lolid": "0267" },
 		{ "name": "Nasus", "lanes": ["Top"] },
 		{ "name": "Nautilus", "lanes": ["Support"] },
 		{ "name": "Neeko", "lanes": ["Mid"] },
 		{ "name": "Nidalee", "lanes": ["Jungle"] },
 		{ "name": "Nilah", "lanes": ["ADC"] },
 		{ "name": "Nocturne", "lanes": ["Jungle", "Top", "Mid"] },
-		{ "name": "Nunu & Willump", "lanes": ["Jungle", "Mid"] },
-		{ "name": "Olaf", "lanes": ["Jungle", "Top"] },
+		{ "name": "Nunu & Willump", "lanes": ["Jungle", "Mid"], "lolid": "0020" },
+		{ "name": "Olaf", "lanes": ["Jungle", "Top"], "lolid": "0002" },
 		{ "name": "Orianna", "lanes": ["Mid", "Support"] },
 		{ "name": "Ornn", "lanes": ["Top"] },
 		{ "name": "Pantheon", "lanes": ["Mid", "Support", "Top"] },
@@ -108,7 +101,7 @@ const champs = {
 		{ "name": "Rell", "lanes": ["Support"] },
 		{ "name": "Renata Glasc", "lanes": ["Support"] },
 		{ "name": "Renekton", "lanes": ["Top", "Mid"] },
-		{ "name": "Rengar", "lanes": ["Top", "Jungle"] },
+		{ "name": "Rengar", "lanes": ["Top", "Jungle"], "lolid": "0107" },
 		{ "name": "Riven", "lanes": ["Top"] },
 		{ "name": "Rumble", "lanes": ["Top", "Mid"] },
 		{ "name": "Ryze", "lanes": ["Mid"] },
@@ -119,13 +112,13 @@ const champs = {
 		{ "name": "Sett", "lanes": ["Top", "Jungle", "Support"] },
 		{ "name": "Shaco", "lanes": ["Jungle"] },
 		{ "name": "Shen", "lanes": ["Top", "Support"] },
-		{ "name": "Shyvana", "lanes": ["Jungle", "Top"] },
+		{ "name": "Shyvana", "lanes": ["Jungle", "Top"], "lolid": "0102" },
 		{ "name": "Singed", "lanes": ["Top"] },
-		{ "name": "Sion", "lanes": ["Top"] },
-		{ "name": "Sivir", "lanes": ["ADC"] },
+		{ "name": "Sion", "lanes": ["Top"], "lolid": "0014" },
+		{ "name": "Sivir", "lanes": ["ADC"], "lolid": "0015" },
 		{ "name": "Skarner", "lanes": ["Jungle"] },
 		{ "name": "Sona", "lanes": ["Support"] },
-		{ "name": "Soraka", "lanes": ["Support"] },
+		{ "name": "Soraka", "lanes": ["Support"], "lolid": "0016" },
 		{ "name": "Swain", "lanes": ["Mid", "Support", "Top", "ADC"] },
 		{ "name": "Sylas", "lanes": ["Mid", "Top"] },
 		{ "name": "Syndra", "lanes": ["Mid"] },
@@ -138,10 +131,10 @@ const champs = {
 		{ "name": "Tristana", "lanes": ["ADC"] },
 		{ "name": "Trundle", "lanes": ["Jungle", "Top"] },
 		{ "name": "Tryndamere", "lanes": ["Top"] },
-		{ "name": "Twisted Fate", "lanes": ["Mid"] },
+		{ "name": "Twisted Fate", "lanes": ["Mid"], "lolid": "0004" },
 		{ "name": "Twitch", "lanes": ["ADC"] },
 		{ "name": "Udyr", "lanes": ["Jungle"] },
-		{ "name": "Urgot", "lanes": ["Top"] },
+		{ "name": "Urgot", "lanes": ["Top"], "lolid": "0006" },
 		{ "name": "Varus", "lanes": ["ADC", "Mid"] },
 		{ "name": "Vayne", "lanes": ["ADC", "Mid"] },
 		{ "name": "Veigar", "lanes": ["Mid"] },
@@ -150,13 +143,13 @@ const champs = {
 		{ "name": "Vi", "lanes": ["Jungle"] },
 		{ "name": "Viego", "lanes": ["Jungle"] },
 		{ "name": "Viktor", "lanes": ["Mid"] },
-		{ "name": "Vladimir", "lanes": ["Mid", "Top"] },
-		{ "name": "Volibear", "lanes": ["Top", "Jungle"] },
-		{ "name": "Warwick", "lanes": ["Jungle", "Top"] },
+		{ "name": "Vladimir", "lanes": ["Mid", "Top"], "lolid": "0008" },
+		{ "name": "Volibear", "lanes": ["Top", "Jungle"], "lolid": "0106" },
+		{ "name": "Warwick", "lanes": ["Jungle", "Top"], "lolid": "0019" },
 		{ "name": "Wukong", "lanes": ["Top", "Jungle"] },
 		{ "name": "Xayah", "lanes": ["ADC"] },
-		{ "name": "Xerath", "lanes": ["Mid", "Support"] },
-		{ "name": "Xin Zhao", "lanes": ["Jungle"] },
+		{ "name": "Xerath", "lanes": ["Mid", "Support"], "lolid": "0101" },
+		{ "name": "Xin Zhao", "lanes": ["Jungle"], "lolid": "0005" },
 		{ "name": "Yasuo", "lanes": ["Mid", "Top", "ADC"] },
 		{ "name": "Yone", "lanes": ["Mid", "Top", "ADC"] },
 		{ "name": "Yorick", "lanes": ["Top"] },
@@ -199,7 +192,7 @@ const cc = {
 		{ "name": "Diana", "cc": [{ "key": "R", "name": "Moonfall" }] },
 		{ "name": "Dr. Mundo", "cc": [{ "key": "Q", "name": "Infected Bonesaw" }] },
 		{ "name": "Draven", "cc": [{ "key": "E", "name": "Stand Aside" }] },
-		{ "name": "Ekko", "cc": [{"key": "Q", "name": "Timewinder"}, { "key": "W", "name": "Parallel Convergence" }] },
+		{ "name": "Ekko", "cc": [{ "key": "Q", "name": "Timewinder" }, { "key": "W", "name": "Parallel Convergence" }] },
 		{ "name": "Elise", "cc": [{ "key": "E", "name": "Cocoon" }] },
 		{ "name": "Evelynn", "cc": [{ "key": "W", "name": "Allure" }] },
 		{ "name": "Ezreal", "cc": [] },
@@ -337,126 +330,69 @@ const cc = {
 	]
 };
 
-const abilityChamps = ['Amumu', 'Anivia', 'Ashe', 'Blitzcrank', "Cho'Gath"];
-const excepts = [
-	{ "type": "list", "champs": ["Ahri", "Amumu", 'Anivia', 'Ashe', 'Blitzcrank', "Cho'Gath"] },
-	{
-		"type": "url", "champs": [
-			{ "name": "Ahri", "urls": [{ "key": "E", "url": "https://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/AhriSeduce.png" }] }
-		]
-	},
-	{ "type": "ability", "champs": abilityChamps },
-	{
-		"type": "name", "champs": [
-			{ "name": "Fiddlesticks", "newname": "FiddleSticks" },
-			{ "name": "Cho'Gath", "newname": "ChoGath" }
-		]
-	}
-]
-
-//looping through all champs
-for (let i = 0; i < champs.champions.length; i++) {
-	//create divs and images for each
-	const champDiv = document.createElement('div');
-	const champImg = document.createElement('img');
-	const favButton = document.createElement('img');
-	champDiv.addEventListener('click', toggleDiv);
-	favButton.addEventListener('click', favoriteChamp);
-	favButton.addEventListener('click', setCookie);
-	favButton.src = "/ext/icons/transparent.png";
-	favButton.classList.add('favButton');
-	champDiv.classList.add('champdiv');
-	champImg.classList.add('champion');
-
-	//loop through their lanes and add them as classes
-	for (let g = 0; g < champs.champions[i].lanes.length; g++) {
-		champDiv.classList.add(champs.champions[i].lanes[g]);
-	}
-
-	//check for spaces, periods, and apostrophes
-	let regEx = /\s|\.|\'|\&/g
-	champImg.id = champs.champions[i].name.replace(regEx, "");
-	champDiv.id = champs.champions[i].name.replace(regEx, "").toLowerCase();
-	favButton.id = champImg.id + "Button";
-
-	//set the source for the image
-	var imgFile = "/ext/champs/" + champImg.id + ".png";
-	champImg.src = imgFile;
-
-	//label with name
-	champDiv.innerText = champs.champions[i].name;
-	champDiv.innerHTML += "<br>";
-
-	champDiv.appendChild(favButton);
-	champDiv.appendChild(champImg); //add image to div
-	document.body.appendChild(champDiv); //add div to body
-}
-
-function toggleDiv() {
-	//grab image from champdiv and check if its dimmed
-	const divImg = this.getElementsByTagName('img')[1];
-	const idName = divImg.id + "ability";
-	const imgIdName = divImg.id + 'abilityimg';
-	if (divImg.classList.contains('filtered')) {
-		divImg.classList.remove('filtered');
-		document.getElementById(idName).remove();
-	} else {
-		divImg.classList.add('filtered');
-
-		//loop through all champions
-		for (let i = 0; i < cc.champions.length; i++) {
-			const currentChamp = cc.champions[i];
-
-			//check if the current champion is the correct one
-			if (currentChamp.name.replace(/\s|\.|\'|\&/g, "") == divImg.id) {
-				//create container for icons and keys
-				const champCC = document.createElement("div");
-				champCC.classList.add('ability');
-				champCC.id = idName;
-
-				//loop through their cc abilities
-				for (let g = 0; g < currentChamp.cc.length; g++) {
-					//create the image for the ability
-					var currentImg = document.createElement('img');
-					var currentFile;
-					var currentKey = currentChamp.cc[g].key;
-					currentImg.classList.add('abilityImg');
-					currentImg.classList.add(currentKey);
-					currentImg.id = imgIdName;
-					console.log(currentChamp.name);
-					//set the source for the icon
-					currentFile = "ext/cc/" + currentChamp.name + "/icon/" + currentKey + ".png";
-					currentImg.src = currentFile;
-
-					//add the key
-					champCC.innerHTML += currentKey;
-
-					//append image to the container
-					champCC.appendChild(currentImg);
-
-					//line breaks
-					champCC.innerHTML += "<br><br>";
-				}
-				this.appendChild(champCC);
-			}
-		}
-
-		const listOfAbilities = document.getElementsByClassName('abilityImg');
-		for (let i = 0; i < listOfAbilities.length; i++) {
-			listOfAbilities[i].addEventListener('click', showAbility);
-		}
-	}
-}
-
-function favoriteChamp() {
+export function showAbility() {
 	event.stopPropagation();
-	const champName = this.id.replace("Button", "");
-	const champ = document.getElementById(champName);
-	if (champ.classList.contains("favorited")) {
-		champ.classList.remove("favorited");
-		this.src = "/ext/icons/transparent.png";
-	} else {
-		champ.classList.add("favorited");
-		this.src = "/ext/icons/opaque.png";
+	for (i = 0; i < document.body.childNodes.length; i++) {
+		if (document.body.childNodes[i].id == 'videodiv') {
+			document.body.removeChild(document.body.childNodes[i]);
+		}
+	}
+	const champ = this.id.replace('abilityimg', '');
+	const ability = this.classList[1];
+	const videoDiv = document.createElement('div');
+	const videoClose = document.createElement('button');
+	const videoTitle = document.createElement('h1');
+	const videoContainer = document.createElement('video');
+	const videoSource = document.createElement('source');
+	var champObj;
+
+	for (i = 0; i < champs.champions.length; i++) {
+		if (champs.champions[i].name.replace(/\s|\.|\'|\&/g, "") == champ) {
+			champObj = champs.champions[i];
+		}
+	}
+
+	const videoElements = [videoClose, videoTitle, videoContainer];
+
+	videoDiv.id = 'videodiv';
+	videoClose.id = 'videobutton';
+
+	videoClose.addEventListener('click', closeDiv)
+
+	var champcc, title, currentCC, videoSRC, champNode;
+	for (i = 0; i < cc.champions.length; i++) {
+		if (champ == cc.champions[i].name.replace(/\s|\.|\'|\&/g, "")) {
+			champcc = cc.champions[i].cc;
+			champNode = i + 46;
+		}
+	}
+	for (i = 0; i < champcc.length; i++) {
+		if (ability == champcc[i].key) {
+			currentCC = champcc[i];
+		}
+	}
+
+	title = currentCC.key + ' - ' + currentCC.name;
+	videoSRC = 'https://d28xe8vt774jo5.cloudfront.net/champion-abilities/' + champObj.lolid + '/ability_' + champObj.lolid + '_' + currentCC.key + '1.webm';
+	videoTitle.innerHTML = title;
+	videoClose.innerHTML = '&times;';
+	videoSource.src = videoSRC;
+	videoContainer.type = 'video/webm';
+	videoContainer.autoplay = true;
+	videoContainer.controls = true;
+
+	videoContainer.appendChild(videoSource);
+	for (i = 0; i < videoElements.length; i++) {
+		videoDiv.appendChild(videoElements[i]);
+	}
+
+	document.body.insertBefore(videoDiv, document.body.childNodes[champNode]);
+}
+
+function closeDiv() {
+	for (i = 0; i < document.body.childNodes.length; i++) {
+		if (document.body.childNodes[i].id == 'videodiv') {
+			document.body.removeChild(document.body.childNodes[i]);
+		}
 	}
 }

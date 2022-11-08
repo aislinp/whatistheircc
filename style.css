@@ -1,0 +1,86 @@
+@font-face {	
+	font-family: "BeaufortforLOL-Bold"; 
+	src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot"); 
+	src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); 
+}
+
+body, button {
+  font-family: 'BeaufortforLOL-Bold', serif;
+	color: white;
+	background-color: #191b1f;
+	text-align: center;
+}
+
+#videodiv {
+	z-index: 3;
+	position: absolute;
+	width: 70%;
+	margin-left: 15%;
+	background-color: #191b1f;
+	text-align: center;
+}
+
+#videobutton {
+	float: right;
+	border: none;
+	font-size: 15px;
+}
+
+video {
+	width: 50%;
+	margin-bottom: 10%;
+}
+
+
+.favButton {
+	position: absolute;
+	width: 20px;
+	z-index: 3;
+}
+
+body {
+	text-align: center;
+}
+
+button, .champdiv {
+  display: inline-block;
+}
+
+input, button, #videodiv {
+	border: 2px inset #dac471;
+}
+
+.champdiv {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+.champion {
+  height: 215px;
+}
+
+.ability {
+	position: absolute;
+	margin-top: -150%;
+	text-align: center;
+	z-index: 2;
+	font-size: 15px;
+}
+
+.abilityImg {
+	z-index: 2;
+	width: 28px;
+	float: left;
+}
+
+.filtered {
+	filter: brightness(30%);
+}
+#google_translate_element {
+	text-align: left;
+}
+
+#little {
+	font-size: 10px;
+}

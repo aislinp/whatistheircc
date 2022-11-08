@@ -1,90 +1,81 @@
-var topButton = document.getElementById('topButton');
-topButton.addEventListener('click', topClick);
-function topClick() {
-	const topLaners = document.getElementsByClassName('Top');
+const topButton = document.getElementById('topButton');
+const jgButton = document.getElementById('jgButton');
+const midButton = document.getElementById('midButton');
+const botButton = document.getElementById('botButton');
+const supButton = document.getElementById('supButton');
+const favButton = document.getElementById('favoriteButton');
+const buttons = [topButton, jgButton, midButton, botButton, supButton, favButton];
 
-	if (topButton.innerHTML == 'Show Top Lane Champs!') {
-		for (let i = 0; i < topLaners.length; i++) {
-			topLaners[i].style.display = 'inline-block';
-		}
-		topButton.innerHTML = 'Hide Top Lane Champs!';
-	} else {
-		for (let i = 0; i < topLaners.length; i++) {
-			topLaners[i].style.display = 'none';
-		}
-		topButton.innerHTML = 'Show Top Lane Champs!';
-	}
+for (i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', toggleLaner);
 }
 
-var jgButton = document.getElementById('jgButton');
-jgButton.addEventListener('click', jgClick);
-function jgClick() {
-	const jgLaners = document.getElementsByClassName('Jungle');
-
-	if (jgButton.innerHTML == 'Show Jungle Champs!') {
-		for (let i = 0; i < jgLaners.length; i++) {
-			jgLaners[i].style.display = 'inline-block';
-		}
-		jgButton.innerHTML = 'Hide Jungle Champs!';
+function toggleLaner() {
+	var laners, lane;
+	const champions = document.getElementsByClassName('champdiv');
+	if (this.id == "topButton") {
+		laners = document.getElementsByClassName('Top');
+		lane = 'Top Lane';
+	} else if (this.id == "jgButton") {
+		laners = document.getElementsByClassName('Jungle');
+		lane = 'Jungle';
+	} else if (this.id == 'midButton') {
+		laners = document.getElementsByClassName('Mid');
+		lane = 'Mid Lane';
+	} else if (this.id == 'botButton') {
+		laners = document.getElementsByClassName('ADC');
+		lane = 'Bot Lane';
+	} else if (this.id == 'supButton') {
+		laners = document.getElementsByClassName('Support');
+		lane = 'Support';
 	} else {
-		for (let i = 0; i < jgLaners.length; i++) {
-			jgLaners[i].style.display = 'none';
-		}
-		jgButton.innerHTML = 'Show Jungle Champs!';
+		lane = 'Favorite';
 	}
-}
 
-var midButton = document.getElementById('midButton');
-midButton.addEventListener('click', midClick);
-function midClick() {
-	const midLaners = document.getElementsByClassName('Mid');
-
-	if (midButton.innerHTML == 'Show Mid Lane Champs!') {
-		for (let i = 0; i < midLaners.length; i++) {
-			midLaners[i].style.display = 'inline-block';
+	if (lane == 'Favorite') {
+		if (this.innerHTML.includes('Only')) {
+			this.innerHTML = 'Show All Champions!';
+			for (let i = 0; i < champions.length; i++) {
+				if (champions[i].getElementsByTagName('IMG')[1].classList.contains('favorited')) {
+					champions[i].style.display = 'inline-block';
+				} else {
+					champions[i].style.display = 'none';
+				}
+			}
+		} else {
+			this.innerHTML = 'Show Only Favorites!';
+			for (let i = 0; i < champions.length; i++) {
+				champions[i].style.display = 'inline-block';
+			}
 		}
-		midButton.innerHTML = 'Hide Mid Lane Champs!';
 	} else {
-		for (let i = 0; i < midLaners.length; i++) {
-			midLaners[i].style.display = 'none';
+		if (document.getElementById('favoriteButton').innerHTML.includes('Only')) {
+			if (this.innerHTML.includes('Show')) {
+				for (let i = 0; i < laners.length; i++) {
+					laners[i].style.display = 'inline-block';
+				}
+				this.innerHTML = 'Hide ' + lane + ' Champs!';
+			} else {
+				for (let i = 0; i < laners.length; i++) {
+					laners[i].style.display = 'none';
+				}
+				this.innerHTML = 'Show ' + lane + ' Champs!';
+			}
+		} else {
+			if (this.innerHTML.includes('Show')) {
+				for (let i = 0; i < laners.length; i++) {
+					if (laners[i].getElementsByTagName('IMG')[1].classList.contains('favorited')) {
+						laners[i].style.display = 'inline-block';
+					}
+				}
+				this.innerHTML = 'Hide ' + lane + ' Champs!';
+			} else {
+				for (let i = 0; i < laners.length; i++) {
+					laners[i].style.display = 'none';
+				}
+				this.innerHTML = 'Show ' + lane + ' Champs!';
+			}
 		}
-		midButton.innerHTML = 'Show Mid Lane Champs!';
-	}
-}
-
-var botButton = document.getElementById('botButton');
-botButton.addEventListener('click', botClick);
-function botClick() {
-	const botLaners = document.getElementsByClassName('ADC');
-
-	if (botButton.innerHTML == 'Show Bot Lane Champs!') {
-		for (let i = 0; i < botLaners.length; i++) {
-			botLaners[i].style.display = 'inline-block';
-		}
-		botButton.innerHTML = 'Hide Bot Lane Champs!';
-	} else {
-		for (let i = 0; i < botLaners.length; i++) {
-			botLaners[i].style.display = 'none';
-		}
-		botButton.innerHTML = 'Show Bot Lane Champs!';
-	}
-}
-
-var supButton = document.getElementById('supButton');
-supButton.addEventListener('click', supClick);
-function supClick() {
-	const supLaners = document.getElementsByClassName('Support');
-
-	if (supButton.innerHTML == 'Show Support Champs!') {
-		for (let i = 0; i < supLaners.length; i++) {
-			supLaners[i].style.display = 'inline-block';
-		}
-		supButton.innerHTML = 'Hide Support Champs!';
-	} else {
-		for (let i = 0; i < supLaners.length; i++) {
-			supLaners[i].style.display = 'none';
-		}
-		supButton.innerHTML = 'Show Support Champs!';
 	}
 }
 
