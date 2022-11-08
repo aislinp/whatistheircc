@@ -218,7 +218,7 @@ const cc = {
 		{ "name": "Jhin", "cc": [{ "key": "W", "name": "Deadly Flourish" }, { "key": "E", "name": "Captive Audience" }, { "key": "R", "name": "Curtain Call" }] },
 		{ "name": "Jinx", "cc": [{ "key": "W", "name": "Zap!" }, { "key": "E", "name": "Flame Chompers!" }] },
 		{ "name": "Kai'Sa", "cc": [] },
-		{ "name": "Kalista", "cc": [{ "key": "R", "name": "Fate's Call" }] },
+		{ "name": "Kalista", "cc": [{"key": "E", "name": "Rend"}, { "key": "R", "name": "Fate's Call" }] },
 		{ "name": "Karma", "cc": [{ "key": "Q", "name": "Inner Flame" }, { "key": "E", "name": "Focused Resolve" }] },
 		{ "name": "Karthus", "cc": [{ "key": "W", "name": "Wall of Pain" }] },
 		{ "name": "Kassadin", "cc": [{ "key": "E", "name": "Force Pulse" }] },
