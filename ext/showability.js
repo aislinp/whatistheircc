@@ -254,7 +254,7 @@ const cc = {
 		{ "name": "Nocturne", "cc": [{ "key": "E", "name": "Unspeakable Horror" }, { "key": "R", "name": "Paranoia" }] },
 		{ "name": "Nunu & Willump", "cc": [{ "key": "W", "name": "Biggest Snowball Ever!" }, { "key": "E", "name": "Snowball Barrage" }, { "key": "R", "name": "Absolute Zero" }] },
 		{ "name": "Olaf", "cc": [{ "key": "Q", "name": "Undertow" }] },
-		{ "name": "Orianna", "cc": [{ "key": "W", "name": "Command: Dissonance" }, { "key": "Command: Shockwave" }] },
+		{ "name": "Orianna", "cc": [{ "key": "W", "name": "Command Dissonance" }, { "key": "Command Shockwave" }] },
 		{ "name": "Ornn", "cc": [{ "key": "Q", "name": "Volcanic Rupture" }, { "key": "E", "name": "Searing Charge" }, { "key": "R", "name": "Call of the Forge God" }] },
 		{ "name": "Pantheon", "cc": [{ "key": "W", "name": "Shield Vault" }] },
 		{ "name": "Poppy", "cc": [{ "key": "Q", "name": "Hammer Shock" }, { "key": "W", "name": "Steadfast Presence" }, { "key": "E", "name": "Heroic Charrge" }, { "key": "R", "name": "Keeper's Verdict" }] },
