@@ -324,7 +324,7 @@ const cc = {
 		{ "name": "Yuumi", "cc": [{ "key": "Q", "name": "Prowling Projectile" }, { "key": "R", "name": "Final Chapter" }] },
 		{ "name": "Zac", "cc": [{ "key": "Q", "name": "Stretching Strikes" }, { "key": "E", "name": "Elastic Slingshot" }, { "key": "R", "name": "Let's Bounce" }] },
 		{ "name": "Zed", "cc": [] },
-		{ "name": "Zeri", "cc": [{ "key": "Q", "name": "Burst Fire" }, { "key": "W", "name": "Ultrashock Laser" }] },
+		{ "name": "Zeri", "cc": [{ "key": "W", "name": "Ultrashock Laser" }] },
 		{ "name": "Ziggs", "cc": [{ "key": "W", "name": "Satchel Charge" }, { "key": "E", "name": "Hexplosive Minefield" }] },
 		{ "name": "Zilean", "cc": [{ "key": "Q", "name": "Time Bomb" }, { "key": "E", "name": "Time Warp" }] },
 		{ "name": "Zoe", "cc": [{ "key": "W", "name": "Spell Thief" }, { "key": "E", "name": "Sleepy Trouble Bubble" }] },
