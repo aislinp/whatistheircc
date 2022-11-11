@@ -11,6 +11,12 @@ body, button {
 	text-align: center;
 }
 
+#cookieButton {
+	float: right;
+	width: 50px;
+	margin-left: -10000px;
+}
+
 #videodiv {
 	z-index: 3;
 	position: absolute;
@@ -77,6 +83,7 @@ input, button, #videodiv {
 .filtered {
 	filter: brightness(30%);
 }
+
 #google_translate_element {
 	text-align: left;
 }

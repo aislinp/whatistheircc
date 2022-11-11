@@ -1,3 +1,6 @@
+const cookieButton = document.getElementById('cookieButton');
+cookieButton.addEventListener('click', toggleCookie);
+
 function setCookie() {
 	if (document.cookie == "champlist=nocookie; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;") {
 		return
@@ -26,7 +29,11 @@ function noCookie() {
 function loadCookies() {
 	const cookie = document.cookie;
 	if (cookie == "") {
-		return
+		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.classList.add('on');
+	} else if (cookie.includes('nocookie')) {
+		cookieButton.src = '/ext/icons/cookieoff.png';
+		cookieButton.classList.add('off');
 	} else {
 		cookieArray = cookie.split(";");
 		cookieList = cookieArray[0].split("=")[1].split("-");
@@ -38,6 +45,21 @@ function loadCookies() {
 			champ.classList.add("favorited");
 			champButton.src = "/ext/icons/opaque.png";
 		}
+		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.classList.add('on');
 	}
+}
 
+function toggleCookie() {
+	if (cookieButton.classList.contains('on')) {
+		noCookie();
+		cookieButton.src = '/ext/icons/cookieoff.png';
+		cookieButton.classList.remove('on');
+		cookieButton.classList.add('off');
+	} else if (cookieButton.classList.contains('off')) {
+		delCookie();
+		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.classList.add('on');
+		cookieButton.classList.remove('off');
+	}
 }
