@@ -4,7 +4,7 @@ cookieButton.addEventListener('click', toggleCookie);
 helpButton.addEventListener('click', toggleHelp);
 
 function setCookie() {
-	if (document.cookie == "champlist=nocookie; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;") {
+	if (document.cookie.includes('nocookie')) {
 		return
 	} else {
 		const d = new Date();
@@ -83,7 +83,8 @@ function toggleHelp() {
 	helpDiv.id = 'helpdiv';
 	helpClose.id = 'helpclose';
 
-	helpClose.addEventListener('click', closeHelp)
+	helpClose.addEventListener('click', closeHelp);
+	document.body.addEventListener('keyup', closeHelp);
 
 	helpText.innerText = 'I use cookies to save which champions you have favorited. If the cookie icon is half-eaten, that means that you have chosen to block cookies from this site. If it is whole, cookies are currently being saved.';
 	helpText2.innerText = 'To block or turn on cookies, simply click on the cookie icon!';

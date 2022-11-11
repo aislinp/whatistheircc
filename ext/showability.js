@@ -28,7 +28,8 @@ export function showAbility() {
 	videoDiv.id = 'videodiv';
 	videoClose.id = 'videobutton';
 
-	videoClose.addEventListener('click', closeDiv)
+	videoClose.addEventListener('click', closeDiv);
+	document.body.addEventListener('keyup', closeDiv);
 
 	var champcc, title, currentCC, videoSRC, champNode;
 	for (i = 0; i < cc.champions.length; i++) {
@@ -51,6 +52,7 @@ export function showAbility() {
 	videoContainer.type = 'video/webm';
 	videoContainer.autoplay = true;
 	videoContainer.controls = true;
+	videoContainer.loop = true;
 
 	videoContainer.appendChild(videoSource);
 	for (i = 0; i < videoElements.length; i++) {
@@ -61,6 +63,7 @@ export function showAbility() {
 }
 
 function closeDiv() {
+	document.body.removeEventListener('keyup', closeDiv);
 	for (i = 0; i < document.body.childNodes.length; i++) {
 		if (document.body.childNodes[i].id == 'videodiv') {
 			document.body.removeChild(document.body.childNodes[i]);

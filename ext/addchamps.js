@@ -70,7 +70,6 @@ function toggleDiv() {
 					currentImg.classList.add('abilityImg');
 					currentImg.classList.add(currentKey);
 					currentImg.id = imgIdName;
-					console.log(currentChamp.name);
 					//set the source for the icon
 					currentFile = "ext/cc/" + currentChamp.name + "/icon/" + currentKey + ".png";
 					currentImg.src = currentFile;
