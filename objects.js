@@ -110,7 +110,7 @@ export const champs = {
 		{ "name": "Sejuani", "lanes": ["Jungle"], "lolid": "0113" },
 		{ "name": "Senna", "lanes": ["Support", "ADC"], "lolid": "0235" },
 		{ "name": "Seraphine", "lanes": ["Mid", "Support", "ADC"], "lolid": "0147" },
-		{ "name": "Sett", "lanes": ["Top", "Jungle", "Support"] },
+		{ "name": "Sett", "lanes": ["Top", "Jungle", "Support"], "lolid": "0875" },
 		{ "name": "Shaco", "lanes": ["Jungle"], "lolid": "0035" },
 		{ "name": "Shen", "lanes": ["Top", "Support"], "lolid": "0875" },
 		{ "name": "Shyvana", "lanes": ["Jungle", "Top"], "lolid": "0102" },

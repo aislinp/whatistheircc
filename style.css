@@ -13,11 +13,16 @@ body, button {
 
 #cookieButton {
 	float: right;
-	width: 50px;
+	width: 30px;
 	margin-left: -10000px;
 }
 
-#videodiv {
+#helpButton {
+	float: right;
+	width: 30px;
+}
+
+#videodiv, #helpdiv {
 	z-index: 3;
 	position: absolute;
 	width: 70%;
@@ -26,7 +31,7 @@ body, button {
 	text-align: center;
 }
 
-#videobutton {
+#videobutton, #helpclose {
 	float: right;
 	border: none;
 	font-size: 15px;
@@ -52,7 +57,7 @@ button, .champdiv {
   display: inline-block;
 }
 
-input, button, #videodiv {
+input, button, #videodiv, #helpdiv {
 	border: 2px inset #dac471;
 }
 

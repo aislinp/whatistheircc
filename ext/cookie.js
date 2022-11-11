@@ -1,5 +1,7 @@
 const cookieButton = document.getElementById('cookieButton');
+const helpButton = document.getElementById('helpButton');
 cookieButton.addEventListener('click', toggleCookie);
+helpButton.addEventListener('click', toggleHelp);
 
 function setCookie() {
 	if (document.cookie == "champlist=nocookie; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;") {
@@ -61,5 +63,43 @@ function toggleCookie() {
 		cookieButton.src = '/ext/icons/cookieon.png';
 		cookieButton.classList.add('on');
 		cookieButton.classList.remove('off');
+	}
+}
+
+function toggleHelp() {
+	event.stopPropagation();
+	for (i = 0; i < document.body.childNodes.length; i++) {
+		if (document.body.childNodes[i].id == 'helpdiv') {
+			document.body.removeChild(document.body.childNodes[i]);
+		}
+	}
+	const helpDiv = document.createElement('div');
+	const helpClose = document.createElement('button');
+	const helpText = document.createElement('H2');
+	const helpText2 = document.createElement('H2');
+
+	const helpElements = [helpClose, helpText, helpText2];
+
+	helpDiv.id = 'helpdiv';
+	helpClose.id = 'helpclose';
+
+	helpClose.addEventListener('click', closeHelp)
+
+	helpText.innerText = 'I use cookies to save which champions you have favorited. If the cookie icon is half-eaten, that means that you have chosen to block cookies from this site. If it is whole, cookies are currently being saved.';
+	helpText2.innerText = 'To block or turn on cookies, simply click on the cookie icon!';
+	helpClose.innerHTML = '&times;';
+
+	for (i = 0; i < helpElements.length; i++) {
+		helpDiv.appendChild(helpElements[i]);
+	}
+
+	document.body.insertBefore(helpDiv, document.body.childNodes[0]);
+}
+
+function closeHelp() {
+	for (i = 0; i < document.body.childNodes.length; i++) {
+		if (document.body.childNodes[i].id == 'helpdiv') {
+			document.body.removeChild(document.body.childNodes[i]);
+		}
 	}
 }
