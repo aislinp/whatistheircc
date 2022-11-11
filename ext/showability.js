@@ -52,6 +52,7 @@ export function showAbility() {
 	videoContainer.type = 'video/webm';
 	videoContainer.autoplay = true;
 	videoContainer.controls = true;
+	videoContainer.loop = true;
 
 	videoContainer.appendChild(videoSource);
 	for (i = 0; i < videoElements.length; i++) {
