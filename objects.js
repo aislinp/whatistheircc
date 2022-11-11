@@ -206,7 +206,7 @@ export const cc = {
 		{ "name": "Gnar", "cc": [{ "key": "Q", "name": "Boomerang Throw / Boulder Toss" }, { "key": "W", "name": "Wallop" }, { "key": "R", "name": "GNAR!" }] },
 		{ "name": "Gragas", "cc": [{ "key": "Q", "name": "Barrel Roll" }, { "key": "E", "name": "Body Slam" }, { "key": "R", "name": "Explosive Cask" }] },
 		{ "name": "Graves", "cc": [{ "key": "W", "name": "Smoke Screen" }] },
-		{ "name": "Gwen", "cc": [] },
+		{ "name": "Gwen", "cc": [{"key": "R", "name": "Needlework"}] },
 		{ "name": "Hecarim", "cc": [{ "key": "E", "name": "Devastating Charge" }, { "key": "R", "name": "Onslaught of Shadows" }] },
 		{ "name": "Heimerdinger", "cc": [{ "key": "E", "name": "CH-2 Electron Storm Grenade" }] },
 		{ "name": "Illaoi", "cc": [{ "key": "E", "name": "Test of Spirit" }] },
