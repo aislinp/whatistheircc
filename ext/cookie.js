@@ -4,7 +4,7 @@ cookieButton.addEventListener('click', toggleCookie);
 helpButton.addEventListener('click', toggleHelp);
 
 function setCookie() {
-	if (document.cookie == "champlist=nocookie; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;") {
+	if (document.cookie.includes('nocookie')) {
 		return
 	} else {
 		const d = new Date();
