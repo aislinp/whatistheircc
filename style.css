@@ -4,6 +4,15 @@
 	src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); 
 }
 
+#support {
+	color: #191b1f;
+	padding: 5px;
+	background-color: #dac471;
+	text-decoration: none;
+	float: left;
+	border-radius: 5px;
+}
+
 body, button {
   font-family: 'BeaufortforLOL-Bold', serif;
 	color: white;
