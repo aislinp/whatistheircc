@@ -65,7 +65,7 @@ export function showAbility() {
 		videoElements = [videoClose, videoTitle, videoContainer];
 	}
 
-	
+
 	videoClose.addEventListener('click', closeDiv);
 	window.addEventListener('keyup', function func(e) {
 		if (e.key == 'Escape') {
@@ -73,8 +73,10 @@ export function showAbility() {
 			window.removeEventListener('keyup', func);
 		} else if (e.key == 'ArrowRight' && videoElements.includes(rightArrow)) {
 			switchDiv('right');
+			window.removeEventListener('keyup', func);
 		} else if (e.key == 'ArrowLeft' && videoElements.includes(leftArrow)) {
 			switchDiv('left');
+			window.removeEventListener('keyup', func);
 		}
 	});
 
@@ -159,7 +161,7 @@ function switchDiv(d) {
 	//ids
 	videoDiv.id = 'videodiv';
 	videoClose.id = 'videobutton';
-	
+
 	//get the node to place it behind
 	for (i = 0; i < cc.champions.length; i++) {
 		if (currentChamp == cc.champions[i].name.replace(/\s|\.|\'|\&/g, "")) {
@@ -196,11 +198,13 @@ function switchDiv(d) {
 			window.removeEventListener('keyup', func);
 		} else if (e.key == 'ArrowRight' && videoElements.includes(rightArrow)) {
 			switchDiv('right');
+			window.removeEventListener('keyup', func);
 		} else if (e.key == 'ArrowLeft' && videoElements.includes(leftArrow)) {
 			switchDiv('left');
+			window.removeEventListener('keyup', func);
 		}
 	});
-	
+
 	//append everything
 
 	title = nextKey.key + ' - ' + nextKey.name;
