@@ -29,7 +29,12 @@ export function showAbility() {
 	videoClose.id = 'videobutton';
 
 	videoClose.addEventListener('click', closeDiv);
-	document.body.addEventListener('keyup', closeDiv);
+	window.addEventListener('keyup', function func(e) {
+		if (e.key == 'Escape') {
+			closeDiv();
+		}
+		window.removeEventListener('keyup', func);
+	});
 
 	var champcc, title, currentCC, videoSRC, champNode;
 	for (i = 0; i < cc.champions.length; i++) {
@@ -63,7 +68,6 @@ export function showAbility() {
 }
 
 function closeDiv() {
-	document.body.removeEventListener('keyup', closeDiv);
 	for (i = 0; i < document.body.childNodes.length; i++) {
 		if (document.body.childNodes[i].id == 'videodiv') {
 			document.body.removeChild(document.body.childNodes[i]);
