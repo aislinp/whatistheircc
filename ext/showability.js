@@ -16,6 +16,7 @@ export function buildAbilityDiv(key, champ) {
 	const videoTitle = document.createElement('h1');
 	const videoContainer = document.createElement('video');
 	const videoSource = document.createElement('source');
+	const videoDescription = document.createElement('div');
 
 	var champObj, champNode;
 
@@ -27,6 +28,7 @@ export function buildAbilityDiv(key, champ) {
 	}
 
 	videoDiv.classList.add(key, champ);
+	videoDescription.classList.add('videoDesc');
 
 	videoDiv.id = 'videodiv';
 	videoClose.id = 'videobutton';
@@ -49,21 +51,23 @@ export function buildAbilityDiv(key, champ) {
 	leftArrow.id = 'leftArrow';
 	rightArrow.addEventListener('click', function f() {
 		let nextKey = champObj.cc[ccIndex + 1].key;
-		buildAbilityDiv(champ, nextKey);
+		buildAbilityDiv(nextKey, champ);
 	});
 	leftArrow.addEventListener('click', function f() {
 		let nextKey = champObj.cc[ccIndex - 1].key;
-		buildAbilityDiv(champ, nextKey);
+		buildAbilityDiv(nextKey, champ);
 	});
 
 	if (champObj.cc.length > 1) {
 		if (ccIndex == 0) {
-			videoElements = [videoClose, videoTitle, videoContainer, rightArrow];
+			videoElements = [videoClose, videoTitle, videoContainer, rightArrow, videoDescription];
 		} else if (ccIndex == champObj.cc.length - 1) {
-			videoElements = [videoClose, videoTitle, leftArrow, videoContainer];
+			videoElements = [videoClose, videoTitle, leftArrow, videoContainer, videoDescription];
 		} else {
-			videoElements = [videoClose, videoTitle, leftArrow, videoContainer, rightArrow];
+			videoElements = [videoClose, videoTitle, leftArrow, videoContainer, rightArrow, videoDescription];
 		}
+	} else {
+		videoElements = [videoClose, videoTitle, videoContainer, videoDescription];
 	}
 
 	videoClose.addEventListener('click', closeDiv);
@@ -86,6 +90,11 @@ export function buildAbilityDiv(key, champ) {
 	videoSRC = 'https://d28xe8vt774jo5.cloudfront.net/champion-abilities/' + champs.champions[champNode - 46].lolid + '/ability_' + champs.champions[champNode - 46].lolid + '_' + key + '1.webm';
 	videoTitle.innerHTML = title;
 	videoClose.innerHTML = '&times;';
+	if (typeof currentCC.desc == "string") {
+		videoDescription.innerHTML = currentCC.desc;
+	} else {
+		videoDescription.innerHTML = 'Description coming soon!';
+	}
 	videoSource.src = videoSRC;
 	videoContainer.type = 'video/webm';
 	videoContainer.autoplay = true;

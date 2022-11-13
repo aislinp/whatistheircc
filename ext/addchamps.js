@@ -88,7 +88,6 @@ function toggleDiv() {
 		}
 
 		const listOfAbilities = document.getElementsByClassName('abilityImg');
-		console.log(listOfAbilities)
 		for (let i = 0; i < listOfAbilities.length; i++) {
 			listOfAbilities[i].addEventListener('click', () => {
 				buildAbilityDiv(listOfAbilities[i].classList[1], listOfAbilities[i].id.replace('abilityimg', ''));

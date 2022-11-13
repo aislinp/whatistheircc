@@ -4,6 +4,34 @@
 	src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); 
 }
 
+.videoDesc {
+	margin: 0px 10px 10px 10px;
+}
+
+.inlineicon {
+	height: 15px;
+}
+
+.ad {
+	color: #f78934;
+}
+
+.crit {
+	text-decoration: underline;
+}
+
+.knockup, .knockdown {
+	color: #bd00ff;
+}
+
+.slow {
+	color: #6bb2dc;
+}
+
+.charm {
+	color: #fa3e79;
+}
+
 #titlelol {
 	margin-top: -30px;
 }
