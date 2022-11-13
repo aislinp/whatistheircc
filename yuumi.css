@@ -7,7 +7,7 @@
 #yuumibutton {
 	color: #191b1f;
 	padding: 5px;
-	background-color: #8ac2d5;
+	background-color: #dac471;
 	text-decoration: none;
 	float: left;
 	border-radius: 5px;
@@ -16,7 +16,7 @@
 #support {
 	color: #191b1f;
 	padding: 5px;
-	background-color: #dac471;
+	background-color: #8ac2d5;
 	text-decoration: none;
 	float: left;
 	border-radius: 5px;
@@ -103,7 +103,7 @@ button, .champdiv {
 }
 
 input, button, #videodiv, #helpdiv {
-	border: 2px inset #dac471;
+	border: 2px inset #8ac2d5;
 }
 
 .champdiv {
