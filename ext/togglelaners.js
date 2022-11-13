@@ -1,10 +1,10 @@
-const topButton = document.getElementById('topButton');
-const jgButton = document.getElementById('jgButton');
-const midButton = document.getElementById('midButton');
-const botButton = document.getElementById('botButton');
-const supButton = document.getElementById('supButton');
-const favButton = document.getElementById('favoriteButton');
-const buttons = [topButton, jgButton, midButton, botButton, supButton, favButton];
+var topButton = document.getElementById('topButton');
+var jgButton = document.getElementById('jgButton');
+var midButton = document.getElementById('midButton');
+var botButton = document.getElementById('botButton');
+var supButton = document.getElementById('supButton');
+var favButton = document.getElementById('favoriteButton');
+var buttons = [topButton, jgButton, midButton, botButton, supButton, favButton];
 
 for (i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener('click', toggleLaner);

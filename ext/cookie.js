@@ -31,10 +31,10 @@ function noCookie() {
 function loadCookies() {
 	const cookie = document.cookie;
 	if (cookie == "") {
-		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.innerHTML = 'turn off cookies';
 		cookieButton.classList.add('on');
 	} else if (cookie.includes('nocookie')) {
-		cookieButton.src = '/ext/icons/cookieoff.png';
+		cookieButton.innerHTML = 'turn on cookies';
 		cookieButton.classList.add('off');
 	} else {
 		cookieArray = cookie.split(";");
@@ -45,9 +45,9 @@ function loadCookies() {
 			const buttonId = champName + "Button";
 			const champButton = document.getElementById(buttonId);
 			champ.classList.add("favorited");
-			champButton.src = "/ext/icons/opaque.png";
+			champButton.innerHTML = "turn on cookies";
 		}
-		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.innerHTML = 'turn off cookies';
 		cookieButton.classList.add('on');
 	}
 }
@@ -55,12 +55,12 @@ function loadCookies() {
 function toggleCookie() {
 	if (cookieButton.classList.contains('on')) {
 		noCookie();
-		cookieButton.src = '/ext/icons/cookieoff.png';
+		cookieButton.innerHTML = 'turn on cookies';
 		cookieButton.classList.remove('on');
 		cookieButton.classList.add('off');
 	} else if (cookieButton.classList.contains('off')) {
 		delCookie();
-		cookieButton.src = '/ext/icons/cookieon.png';
+		cookieButton.innerHTML = 'turn off cookies';
 		cookieButton.classList.add('on');
 		cookieButton.classList.remove('off');
 	}
