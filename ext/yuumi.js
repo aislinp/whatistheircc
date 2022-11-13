@@ -1,6 +1,6 @@
 import { cancels } from '/objects.js';
 import { champs } from '/objects.js';
-import { showAbility } from './showability.js';
+import { buildAbilityDiv } from './showability.js';
 
 //looping through all champs
 for (let i = 0; i < champs.champions.length; i++) {
@@ -90,7 +90,9 @@ function toggleDiv() {
 
 		const listOfAbilities = document.getElementsByClassName('abilityImg');
 		for (let i = 0; i < listOfAbilities.length; i++) {
-			listOfAbilities[i].addEventListener('click', showAbility);
+			listOfAbilities[i].addEventListener('click', () => {
+				buildAbilityDiv(listOfAbilities[i].classList[1], listOfAbilities[i].id.replace('abilityimg', ''));
+			});
 		}
 	}
 }
