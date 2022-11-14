@@ -4,48 +4,11 @@
 	src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); 
 }
 
-.videoDesc {
-	margin: 0px 10px 10px 10px;
-}
-
-.inlineicon {
-	height: 15px;
-}
-
-.ghost {
-	color: #54deef;
-}
-
-.ad {
-	color: #f78934;
-}
-
-.ap {
-	color: #7a6dff;
-}
-
-.crit {
-	text-decoration: underline;
-}
-
-.stun {
-	color: #a619c7;
-}
-
-.knockup, .knockdown {
-	color: #bd00ff;
-}
-
-.slow {
-	color: #6bb2dc;
-}
-
-.charm {
-	color: #fa3e79;
-}
-
-#titlelol {
-	margin-top: -30px;
+body, button {
+  font-family: 'BeaufortforLOL-Bold', serif;
+	color: white;
+	background-color: #191b1f;
+	text-align: center;
 }
 
 #yuumibutton, #helpButton, #support, #cookieButton {
@@ -57,19 +20,49 @@
 	margin-right: 5px;
 }
 
-#yuumibutton, #helpButton {
-	background-color: #8ac2d5;
-}
 
-#support, #cookieButton {
-	background-color: #dac471;
-}
-
-body, button {
-  font-family: 'BeaufortforLOL-Bold', serif;
-	color: white;
-	background-color: #191b1f;
+.champdiv {
+	position: relative;
+	z-index: 1;
 	text-align: center;
+}
+
+.champion {
+  height: 215px;
+}
+
+.ability {
+	position: absolute;
+	margin-top: -150%;
+	text-align: center;
+	z-index: 2;
+	font-size: 15px;
+}
+
+.abilityImg {
+	z-index: 2;
+	width: 28px;
+	float: left;
+}
+
+.filtered {
+	filter: brightness(30%);
+}
+
+#google_translate_element {
+	text-align: left;
+}
+
+#little {
+	font-size: 10px;
+}
+
+#titlelol {
+	margin-top: -30px;
+}
+
+.videoDesc {
+	margin: 0px 10px 10px 10px;
 }
 
 #videodiv, #helpdiv {
@@ -131,44 +124,4 @@ body {
 
 button, .champdiv {
   display: inline-block;
-}
-
-input, button, #videodiv, #helpdiv {
-	border: 2px inset #dac471;
-}
-
-.champdiv {
-	position: relative;
-	z-index: 1;
-	text-align: center;
-}
-
-.champion {
-  height: 215px;
-}
-
-.ability {
-	position: absolute;
-	margin-top: -150%;
-	text-align: center;
-	z-index: 2;
-	font-size: 15px;
-}
-
-.abilityImg {
-	z-index: 2;
-	width: 28px;
-	float: left;
-}
-
-.filtered {
-	filter: brightness(30%);
-}
-
-#google_translate_element {
-	text-align: left;
-}
-
-#little {
-	font-size: 10px;
 }

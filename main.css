@@ -1,11 +1,11 @@
 #yuumibutton, #helpButton {
-	background-color: #dac471;
-}
-
-#support, #cookieButton {
 	background-color: #8ac2d5;
 }
 
+#support, #cookieButton {
+	background-color: #dac471;
+}
+
 input, button, #videodiv, #helpdiv {
-	border: 2px inset #8ac2d5;
+	border: 2px inset #dac471;
 }

@@ -1,5 +1,5 @@
-const cookieButton = document.getElementById('cookieButton');
-const helpButton = document.getElementById('helpButton');
+var cookieButton = document.getElementById('cookieButton');
+var helpButton = document.getElementById('helpButton');
 cookieButton.addEventListener('click', toggleCookie);
 helpButton.addEventListener('click', toggleHelp);
 
