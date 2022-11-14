@@ -61,10 +61,6 @@ body, button {
 	margin-top: -30px;
 }
 
-.videoDesc {
-	margin: 0px 10px 10px 10px;
-}
-
 #videodiv, #helpdiv {
 	z-index: 3;
 	position: absolute;
