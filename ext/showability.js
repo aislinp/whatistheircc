@@ -21,7 +21,7 @@ export function buildAbilityDiv(key, champ) {
 	var champObj, champNode;
 
 	for (i = 0; i < cc.champions.length; i++) {
-		if (cc.champions[i].name == champ) {
+		if (cc.champions[i].name.replace(/\s|\.|\'|\&/g, "") == champ) {
 			champObj = cc.champions[i];
 			champNode = i + 46;
 		}
