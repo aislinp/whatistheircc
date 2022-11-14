@@ -12,12 +12,24 @@
 	height: 15px;
 }
 
+.ghost {
+	color: #54deef;
+}
+
 .ad {
 	color: #f78934;
 }
 
+.ap {
+	color: #7a6dff;
+}
+
 .crit {
 	text-decoration: underline;
+}
+
+.stun {
+	color: #a619c7;
 }
 
 .knockup, .knockdown {
