@@ -91,7 +91,7 @@ function toggleHelp() {
 		window.removeEventListener('keyup', func);
 	});
 
-	helpText.innerText = 'I use cookies to save which champions you have favorited. If the cookie icon is half-eaten, that means that you have chosen to block cookies from this site. If it is whole, cookies are currently being saved.';
+	helpText.innerText = 'I use cookies to save which champions you have favorited.';
 	helpText2.innerText = 'To block or turn on cookies, simply click on the cookie icon!';
 	helpClose.innerHTML = '&times;';
 
