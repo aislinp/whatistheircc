@@ -45,7 +45,7 @@ function loadCookies() {
 			const buttonId = champName + "Button";
 			const champButton = document.getElementById(buttonId);
 			champ.classList.add("favorited");
-			champButton.innerHTML = "turn on cookies";
+			champButton.src = "/ext/icons/opaque.png";
 		}
 		cookieButton.innerHTML = 'turn off cookies';
 		cookieButton.classList.add('on');
