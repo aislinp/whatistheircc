@@ -25,10 +25,13 @@ for (let i = 0; i < champs.champions.length; i++) {
 	champImg.id = champs.champions[i].name.replace(regEx, "");
 	champDiv.id = champs.champions[i].name.replace(regEx, "").toLowerCase();
 	favButton.id = champImg.id + "Button";
+	favButton.alt = "Button to favorite " + champs.champions[i].name;
 
 	//set the source for the image
 	var imgFile = "/ext/champs/" + champImg.id + ".png";
+	var imgAlt = "League of Legends default splash art of " + champs.champions[i].name;
 	champImg.src = imgFile;
+	champImg.alt = imgAlt;
 
 	//label with name
 	champDiv.innerText = champs.champions[i].name;
