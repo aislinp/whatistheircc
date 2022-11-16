@@ -34,8 +34,10 @@ export function buildAbilityDiv(key, champ) {
 	videoClose.id = 'videobutton';
 
 	var title, currentCC, videoSRC, videoElements, ccIndex;
+	var champCC = [];
 
 	for (let i = 0; i < champObj.cc.length; i++) {
+		champCC.push(champObj.cc[i].key);
 		if (key == champObj.cc[i].key) {
 			currentCC = champObj.cc[i];
 			ccIndex = i;
@@ -82,6 +84,9 @@ export function buildAbilityDiv(key, champ) {
 		} else if (e.key == 'ArrowLeft' && videoElements.includes(leftArrow)) {
 			let nextKey = champObj.cc[ccIndex - 1].key;
 			buildAbilityDiv(nextKey, champ);
+			window.removeEventListener('keyup', f);
+		} else if (champCC.includes(e.key.toUpperCase()) && champObj.cc[ccIndex].key != e.key.toUpperCase()) {
+			buildAbilityDiv(e.key.toUpperCase(), champ);
 			window.removeEventListener('keyup', f);
 		}
 	});
