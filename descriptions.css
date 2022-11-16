@@ -31,7 +31,7 @@
 	color: #bd00ff;
 }
 
-.slow {
+.slow, .asreduce {
 	color: #6bb2dc;
 }
 
@@ -61,4 +61,8 @@
 
 .fear {
 	color: #08a6f7;
+}
+
+.taunt {
+	color: #f77900;
 }
