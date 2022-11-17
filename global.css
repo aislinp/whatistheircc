@@ -24,6 +24,9 @@ button:hover {
 	margin-right: 5px;
 }
 
+#yuumibutton:hover, #helpButton:hover, #support:hover, #cookieButton:hover {
+	background-color: #ce9beb;
+}
 
 .champdiv {
 	position: relative;

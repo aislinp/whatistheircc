@@ -2,6 +2,10 @@
 	background-color: #8ac2d5;
 }
 
+#yuumibutton:hover, #helpButton:hover {
+	background-color: #ce9beb;
+}
+
 #support, #cookieButton {
 	background-color: #dac471;
 }
