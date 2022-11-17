@@ -1,3 +1,4 @@
+//get buttons from doc
 var topButton = document.getElementById('topButton');
 var jgButton = document.getElementById('jgButton');
 var midButton = document.getElementById('midButton');
@@ -12,6 +13,7 @@ for (i = 0; i < buttons.length; i++) {
 
 function toggleLaner() {
 	var laners, lane;
+	//probably a more efficient way of doing this... oh Well
 	const champions = document.getElementsByClassName('champdiv');
 	if (this.id == "topButton") {
 		laners = document.getElementsByClassName('Top');
@@ -32,6 +34,7 @@ function toggleLaner() {
 		lane = 'Favorite';
 	}
 
+	//pretty simple.. if the button clicked says 'hide', hide the laners, else show them etc
 	if (lane == 'Favorite') {
 		if (this.innerHTML.includes('Only')) {
 			this.innerHTML = 'Show All Champions!';
@@ -82,7 +85,7 @@ function toggleLaner() {
 var searchChamps = document.getElementById("searchChamps");
 searchChamps.addEventListener("keyup", search);
 
-function search() {
+function search() { //thank you w3schools you are the GOAT
 	let regEx = /\s|\.|\'/g
 	var filter = searchChamps.value.replace(regEx, "").toLowerCase();
 	champs = document.getElementsByClassName("champdiv");

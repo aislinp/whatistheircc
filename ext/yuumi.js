@@ -1,3 +1,4 @@
+//basically the exact same as addchamps.js and showability.js, just edited to use the cc from cancels
 import { cancels } from '/objects.js';
 import { champs } from '/objects.js';
 import { cc } from '/objects.js';

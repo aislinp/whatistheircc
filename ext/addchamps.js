@@ -1,4 +1,4 @@
-import { cc } from '/objects.js';
+import { cc } from '/objects.js'; //still confused on how to import JSON files on safari/firefox/etc.. but this works.
 import { champs } from '/objects.js';
 import { buildAbilityDiv } from './showability.js';
 //looping through all champs
@@ -43,14 +43,18 @@ for (let i = 0; i < champs.champions.length; i++) {
 }
 
 function toggleDiv() {
-	//grab image from champdiv and check if its dimmed
+	//grab image from champdiv
 	const divImg = this.getElementsByTagName('img')[1];
+	//set up id names based on champ
 	const idName = divImg.id + "ability";
 	const imgIdName = divImg.id + 'abilityimg';
+	//check if image is already filtered
 	if (divImg.classList.contains('filtered')) {
+		//if it is, get rid of abilities and make it unfiltered
 		divImg.classList.remove('filtered');
 		document.getElementById(idName).remove();
 	} else {
+		//if it isn't, set up abilities and filter
 		divImg.classList.add('filtered');
 
 		//loop through all champions
@@ -91,7 +95,7 @@ function toggleDiv() {
 		}
 
 		const listOfAbilities = document.getElementsByClassName('abilityImg');
-		for (let i = 0; i < listOfAbilities.length; i++) {
+		for (let i = 0; i < listOfAbilities.length; i++) { //add event listeners
 			listOfAbilities[i].addEventListener('click', () => {
 				buildAbilityDiv(listOfAbilities[i].classList[1], listOfAbilities[i].id.replace('abilityimg', ''));
 			});
@@ -100,14 +104,14 @@ function toggleDiv() {
 }
 
 function favoriteChamp() {
-	event.stopPropagation();
-	const champName = this.id.replace("Button", "");
+	event.stopPropagation(); //no bubbling >:(
+	const champName = this.id.replace("Button", ""); //get the champ that is being favorited
 	const champ = document.getElementById(champName);
-	if (champ.classList.contains("favorited")) {
-		champ.classList.remove("favorited");
+	if (champ.classList.contains("favorited")) { //if its already favorited...
+		champ.classList.remove("favorited"); //unfavorite it
 		this.src = "/ext/icons/transparent.png";
-	} else {
-		champ.classList.add("favorited");
+	} else { //if it isn't
+		champ.classList.add("favorited"); //favorite it
 		this.src = "/ext/icons/opaque.png";
 	}
 }

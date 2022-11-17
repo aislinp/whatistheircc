@@ -1,3 +1,6 @@
+//world's most boring thing to do EVER.
+//i need to figure out how to use the api. i wouldnt have to manually input each description >:(
+
 export const champs = {
 	"champions": [
 		{ "name": "Aatrox", "lanes": ["Top"], "lolid": "0266" },
