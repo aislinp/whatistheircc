@@ -11,6 +11,16 @@ body, button {
 	text-align: center;
 }
 
+progress, label {
+	float: right;
+}
+
+progress {
+	margin-top: 5px;
+	margin-left: 5px;
+	accent-color: #dac471;
+}
+
 button:hover {
 	cursor: pointer;
 }

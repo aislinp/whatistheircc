@@ -1,6 +1,23 @@
 import { cc } from '/objects.js'; //still confused on how to import JSON files on safari/firefox/etc.. but this works.
 import { champs } from '/objects.js';
 import { buildAbilityDiv } from './showability.js';
+
+//set up progress bar
+var progress = document.getElementById('progress');
+var value = 0, max = 0;
+for (let i = 0; i < cc.champions.length; i++) {
+	if(cc.champions[i].cc.length != 0){
+		max += cc.champions[i].cc.length;
+		for(let j = 0; j < cc.champions[i].cc.length; j++){
+			if(cc.champions[i].cc[j].desc) {
+				value++;
+			}
+		}
+	}
+}
+progress.value = value;
+progress.max = max;
+
 //looping through all champs
 for (let i = 0; i < champs.champions.length; i++) {
 	//create divs and images for each
